@@ -20,4 +20,6 @@ const modal = props => (
     </React.Fragment>
 );
 
-export default modal;
+const propsChanged = (prevProps, nextProps) => prevProps.showProperty === nextProps.showProperty;
+
+export default React.memo(modal, propsChanged);

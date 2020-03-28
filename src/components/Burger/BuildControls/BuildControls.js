@@ -20,7 +20,8 @@ const controls = [
         label: 'Meat',
         type: 'meat'
     },
-]
+];
+
 const buildControls = (props) => (
     <div className={classes.BuildControls}>
         <p>Current price: <strong>{props.price.toFixed(2)}</strong></p>
@@ -36,7 +37,8 @@ const buildControls = (props) => (
         }
         <button
             className={classes.OrderButton}
-            disabled={!props.purchasable}>
+            disabled={!props.purchasable}
+            onClick={props.ordered}>
             ORDER NOW
         </button>
     </div>
